@@ -3,10 +3,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./components/news/news.css" />
-    <link rel="icon" href="./components/assets/bgimg.jpg" type="image/png" />
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="../../index.css" />
+
+    <link rel="stylesheet" href="../news/news.css" />
+    <link rel="icon" href="../assets/bgimg.jpg" type="image/png" />
+    <link rel="stylesheet" href="./login-out.css" />
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -35,7 +36,7 @@
       <header>
         <div class="navigation">
           <div class="above-nav">
-            <img src="./components/assets/logo.png" />
+            <img src="../assets/logo.png" />
             <div class="hero-section">
               <div class="slogan">
                 <h1><b>brings you the best</b></h1>
@@ -43,36 +44,39 @@
             </div>
 
             <span class="right-icons">
-              <div class="user-auth">
-                <a href="./components/log/login.html">Register</a>
-                <span class="beween"><p>/</p></span>
-                <a href="./components/log/login.html">Log-in</a>
-                <div class="icon-log">
-                  <a href="./components/log/login.html">
-                    <i class="fa fa-user-circle"></i
-                  ></a>
+              <div class="open">
+                <div class="box" id="box">
+                  <!-- Bird image is initially hidden -->
+                  <img src="../assets/surprise.png" alt="Bird" id="bird" />
+                  <img src="../assets/gift-bag.png" alt="Gift" id="giftImg" />
+                </div>
+
+                <div id="message">
+                  <p>You have received a teddy bear from us!</p>
+                  <img src="../assets/teddy-bear.png" alt="" />
+                  <i class="fa-solid fa-x" id="close"></i>
                 </div>
               </div>
             </span>
           </div>
           <div class="main-nav">
             <div class="compo">
-              <a href="./index.html"> Home page </a>
+              <a href="../../index.html"> Home page </a>
 
-              <a href="./components/shoppingCart/shoppingcart.html">
-                Shopping card
-              </a>
+              <a href="#"> Giới thiệu </a>
 
-              <a href="#products"> Products </a>
+              <a href="#products"> Shopping card </a>
 
-              <a href="#neww"> News </a>
+              <a href="#neww"> Products </a>
             </div>
             <div class="search">
               <div class="input">
                 <input
+                  id="productSearch"
+                  onkeyup="searchProducts()"
                   type="text"
+        
                   placeholder="Enter your products...!"
-                  id="search-input"
                 />
                 <i class="fa fa-search"></i>
               </div>
@@ -84,36 +88,39 @@
         </div>
       </header>
       <marquee class="move"><h2>WELCOME TO MY WEBSITE</h2></marquee>
+
       <!-- THIS IS A BANNER  -->
       <div class="banner">
-        <img src="./components/assets/bgimg.jpg" alt="" id="banner" />
+        <img src="../assets/bgimg.jpg" alt="" id="banner" />
       </div>
 
       <main>
         <div class="menu">
-          <div class="left-banner">
-            <img src="./components/assets/logo.png" alt="" />
+          <!-- <div class="left-banner">
+            <img src="../assets/logo.png" alt="" />
             <div class="intro">
-              <p class="title">WHAT TO EAT TODAY!</p>
+              <p class="title">HÔM NAY ĂN GÌ!</p>
               <p class="content">
-                Our menu is very rich and brings you the best for your health.
+                Thực đơn của chúng tôi rất phong phú và mang lại cho bạn những
+                điều tốt nhất cho sức khỏe của bạn.
               </p>
             </div>
 
             <div class="container-time">
               <div id="set-day"></div>
-              <!-- <div id="good"></div> -->
+             <div id="good"></div> 
               <div class="icon" id="weather-icon"></div>
               <div id="set-hour"></div>
             </div>
             <div class="container-pets">
-              <img src="./components/assets/tiger.png" alt="" />
-              <img src="./components/assets/bee.png" alt="" />
-              <img src="./components/assets/elephant.png" alt="" />
-              <img src="./components/assets/dinosaur.png" alt="" />
-              <img src="./components/assets/bird.png" alt="" />
+              <img src="../assets/tiger.png" alt="" />
+              <img src="../assets/bee.png" alt="" />
+              <img src="../assets/elephant.png" alt="" />
+              <img src="../assets/dinosaur.png" alt="" />
+              <img src="../assets/bird.png" alt="" />
             </div>
           </div>
+           -->
           <div id="products" class="products">
             <div class="best-sell">
               <div class="name-class">
@@ -121,7 +128,7 @@
               </div>
               <div class="pro-of-best">
                 <div class="product">
-                  <img src="./components/assets/chicken.jpg" alt="" />
+                  <img src="../assets/chicken.jpg" alt="" />
                   <div class="product-detail">
                     <strong class="name">Chicken</strong>
                     <div class="value">
@@ -130,9 +137,8 @@
                     <div class="add">Thêm ngay</div>
                   </div>
                 </div>
-
                 <div class="product">
-                  <img src="./components/assets/mitq.jpg" alt="" />
+                  <img src="../assets/mitq.jpg" alt="" />
                   <div class="product-detail">
                     <strong class="name">Noodles</strong>
                     <div class="value">68K</div>
@@ -140,7 +146,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/muc.jpg" alt="" />
+                  <img src="../assets/muc.jpg" alt="" />
                   <div class="product-detail">
                     <strong class="name">Squid</strong>
                     <div class="value">
@@ -150,7 +156,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/banhmi.jpg" alt="Hamburger" />
+                  <img src="../assets/banhmi.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Bread</strong>
                     <div class="value">
@@ -159,8 +165,9 @@
                     <div class="add">Thêm ngay</div>
                   </div>
                 </div>
+
                 <div class="product">
-                  <img src="./components/assets/bo.jpg" alt="Hamburger" />
+                  <img src="../assets/bo.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Steak</strong>
                     <div class="value">
@@ -170,7 +177,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/bone.jpg" alt="Hamburger" />
+                  <img src="../assets/bone.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Cown</strong>
                     <div class="value">
@@ -180,9 +187,22 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/chaca.jpg" alt="Hamburger" />
+                  <img src="../assets/chaca.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Korean</strong>
+                    <div class="value">
+                      <span class="sale-off">98K</span> 78K
+                    </div>
+                    <div class="add">Thêm ngay</div>
+                  </div>
+                </div>
+                <div class="product">
+                  <img
+                    src="https://tiki.vn/blog/wp-content/uploads/2023/01/cach-lam-bun-dau-mam-tom.png"
+                    alt="Hamburger"
+                  />
+                  <div class="product-detail">
+                    <strong class="name">Bun Dau Mam Tom</strong>
                     <div class="value">
                       <span class="sale-off">98K</span> 78K
                     </div>
@@ -198,7 +218,20 @@
               </div>
               <div class="pro-of-hot">
                 <div class="product">
-                  <img src="./components/assets/comsuon.jpeg" alt="Hamburger" />
+                  <img
+                    src="https://kenh14cdn.com/thumb_w/600/2016/coca3-1455639387726.jpeg"
+                    alt="Hamburger"
+                  />
+                  <div class="product-detail">
+                    <strong class="name">Coca Cola</strong>
+                    <div class="value">
+                      <span class="sale-off">95K</span> 79K
+                    </div>
+                    <div class="add">Thêm ngay</div>
+                  </div>
+                </div>
+                <div class="product">
+                  <img src="../assets/comsuon.jpeg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Com suon</strong>
                     <div class="value">
@@ -208,7 +241,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/france1.jpg" alt="Hamburger" />
+                  <img src="../assets/france1.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">France</strong>
                     <div class="value">
@@ -218,7 +251,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/kem.jpg" alt="Hamburger" />
+                  <img src="../assets/kem.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Ice cream</strong>
                     <div class="value">
@@ -228,7 +261,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/sushi.png" alt="Hamburger" />
+                  <img src="../assets/sushi.png" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Shushi</strong>
                     <div class="value">
@@ -238,7 +271,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/trấu.webp" alt="Hamburger" />
+                  <img src="../assets/trấu.webp" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Milk Tea</strong>
                     <div class="value">
@@ -248,7 +281,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/lobster.jpg" alt="Hamburger" />
+                  <img src="../assets/lobster.jpg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Lobster</strong>
                     <div class="value">
@@ -258,7 +291,7 @@
                   </div>
                 </div>
                 <div class="product">
-                  <img src="./components/assets/miy.jpeg" alt="Hamburger" />
+                  <img src="../assets/miy.jpeg" alt="Hamburger" />
                   <div class="product-detail">
                     <strong class="name">Pasta</strong>
                     <div class="value">
@@ -277,7 +310,7 @@
             <div class="check">
               <h3>VEGETATLES ARE ESSENTIAL FOR US!</h3>
               <div class="img-of-check">
-                <img src="./components/assets/vegetables.webp" />
+                <img src="../assets/vegetables.webp" />
               </div>
 
               <p>
@@ -300,7 +333,7 @@
             <div class="check">
               <h3>FLAVOR BRINGS MANY YUMMY DISHES!</h3>
               <div class="img-of-check">
-                <img src="./components/assets/spice.jpg" />
+                <img src="../assets/spice.jpg" />
               </div>
 
               <p>
@@ -323,7 +356,7 @@
             <div class="check">
               <h3>MILK IS SO NEEDFUL FOR OUR HEALTH</h3>
               <div class="img-of-check">
-                <img src="./components/assets/milk.jpg" />
+                <img src="../assets/milk.jpg" />
               </div>
 
               <p>
@@ -346,7 +379,7 @@
             <div class="check">
               <h3>SMART SHOPPING FOR OUR LIFE</h3>
               <div class="img-of-check">
-                <img src="./components/assets/smartshooping.jpg" />
+                <img src="../assets/smartshooping.jpg" />
               </div>
 
               <p>
@@ -371,12 +404,13 @@
       <footer>
         <div class="main-contents">
           <div class="logo-infooter">
-            <img src="./components/assets/logo.png" alt="" />
+            <img src="../assets/logo.png" alt="" />
           </div>
           <div class="first-content">
             <h2>CÔNG TY 3 THÀNH VIÊN FLAVORFOOD</h2>
             <p>
-              Địa chỉ: Tầng 5, Vincom Xuan Khanh, Cái Khế, Ninh Kiều, Cần Thơ.
+              Địa chỉ: Tầng 15, Khách sạn Mường Thanh Luxury Cần Thơ, Cái Khế,
+              Ninh Kiều, Cần Thơ.
             </p>
             <p>Điện thoại: (035) 27542781</p>
             <p>Tổng đài: 1900-1199 Mã số thuế: 098002383</p>
@@ -388,7 +422,7 @@
 
           <div class="second-content">
             <div class="order">
-              <img src="./components/assets/contact.png" alt="" />
+              <img src="../assets/contact.png" alt="" />
             </div>
             <p>Liên hệ</p>
             <p>Chính sách và quy định chung</p>
@@ -410,13 +444,13 @@
             <p><i class="fa-regular fa-envelope"></i> Email</p>
 
             <div class="anh1">
-              <img src="./components/assets/anh1.png" />
+              <img src="../assets/anh1.png" />
             </div>
             <div class="draw"></div>
             <div class="mix-logo">
               <h3>TẢI ỨNG DỤNG ĐẶT HÀNG VỚI NHIỀU ƯU ĐÃI HƠN</h3>
-              <img src="./components/assets/google.png" alt="" />
-              <img src="./components/assets/appstore.png" alt="" />
+              <img src="../assets/google.png" alt="" />
+              <img src="../assets/appstore.png" alt="" />
             </div>
           </div>
         </div>
@@ -430,7 +464,7 @@
     <div class="toast toast-success">
       <div class="toast-content">
         <div class="chickenicon">
-          <img src="./components/assets/chickenicon.png" alt="" />
+          <img src="../assets/chickenicon.png" alt="" />
         </div>
 
         <div class="message">
@@ -438,7 +472,7 @@
           <span class="text text-2">
             Thanks for your concern about us
             <span class="pengui">
-              <img src="./components/assets/pengui.png" alt=""
+              <img src="../assets/pengui.png" alt=""
             /></span>
           </span>
         </div>
@@ -464,7 +498,7 @@
     </script>
     <script>
       $(document).ready(function () {
-        $(".pro-of-best, .pro-of-hot").slick({
+        /*    $(".pro-of-best, .pro-of-hot").slick({ 
           slidesToShow: 4,
           slidesToScroll: 1,
           dots: true,
@@ -477,47 +511,62 @@
             return '<i class="fas fa-circle"></i>';
           },
         });
-
+*/
         let geth1 = document.querySelector(".best-sell .name-class h1");
         let geth2 = document.querySelector(".hot-sell .name-class h1");
 
         setInterval(function () {
           setTimeout(function () {
-            geth1.style.color = "#87A922";
+            geth1.style.color = "#4169E1";
           }, 1000);
           setTimeout(function () {
-            geth1.style.color = "#FCDC2A";
+            geth1.style.color = "#FF8C00";
           }, 2000);
           setTimeout(function () {
-            geth1.style.color = "#FF8E8F";
+            geth1.style.color = "#FFD700";
           }, 3000);
 
           setTimeout(function () {
-            geth1.style.color = "#F08080";
-          }, 3000);
+            geth1.style.color = "#ADFF2F";
+          }, 4000);
 
           setTimeout(function () {
-            geth1.style.color = "#7CFC00";
-          }, 3000);
-        }, 3000);
+            geth1.style.color = "#00FF00";
+          }, 5000);
+        }, 2000);
 
         setInterval(function () {
           setTimeout(function () {
-            geth2.style.color = "#DEB887";
+            geth2.style.color = "#FFD700";
           }, 1000);
           setTimeout(function () {
             geth2.style.color = "#FF7F50";
           }, 2000);
           setTimeout(function () {
-            geth2.style.color = "#8B008B";
+            geth2.style.color = "#4B0082";
           }, 3000);
           setTimeout(function () {
-            geth2.style.color = "#696969";
-          }, 3000);
+            geth2.style.color = "#000080";
+          }, 4000);
           setTimeout(function () {
             geth2.style.color = "#FF00FF";
-          }, 3000);
-        }, 3000);
+          }, 5000);
+        }, 2000);
+      });
+    </script>
+    <script src="./login-out.js"></script>
+    <!-- present -->
+    <script>
+      $(document).ready(function () {
+        $("#giftImg").click(function () {
+          $("#message").show();
+          $("#giftImg").hide();
+        });
+
+        $("#close").click(function () {
+          $("#message").hide();
+          $("#bird").show();
+        });
       });
     </script>
   </body>

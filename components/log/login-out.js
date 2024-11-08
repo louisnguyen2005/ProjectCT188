@@ -8,9 +8,9 @@ function updateDateTime() {
   /* Check if it's AM or PM and set the icon */
   let icon =
     today.getHours() >= 18
-      ? `<div class="moon"><img src="./components/assets/moonst.png" alt="">
-</div>`
-      : `<div class="sun"><img src="./components/assets/sun.png" alt=""></div>`;
+      ? `<div class="moon"><img src="../assets/moonst.png" alt="">
+  </div>`
+      : `<div class="sun"><img src="../assets/sun.png" alt=""></div>`;
 
   let check = today.getHours() >= 12 ? "PM" : "AM";
 
@@ -53,11 +53,11 @@ setInterval(updateDateTime, 1000);
 let index__banner = 1;
 const changeImage = () => {
   let imgs = [
-    "./components/assets/bgimg.jpg",
-    "./components/assets/banner5.jpg",
-    "./components/assets/banner6.jpg",
-    "./components/assets/banner7.jpg",
-    "./components/assets/banner8.webp",
+    "../assets/bgimg.jpg",
+    "../assets/banner5.jpg",
+    "../assets/banner6.jpg",
+    "../assets/banner7.jpg",
+    "../assets/banner8.webp",
   ];
   document.getElementById("banner").src = imgs[index__banner];
   index__banner++;
@@ -67,18 +67,22 @@ const changeImage = () => {
 };
 setInterval(changeImage, 6000);
 
-// document.getElementById("search-input").addEventListener("input", function () {
-//   const query = this.value.toLowerCase();
-//   const products = document.querySelectorAll(".product");
 
-//   products.forEach((product) => {
-//     const productName = product
-//       .querySelector(".name")
-//       .textContent.toLowerCase();
-//     if (productName.includes(query)) {
-//       product.style.display = "block"; // Show matching product
-//     } else {
-//       product.style.display = "none"; // Hide non-matching products
-//     }
-//   });
-// });
+
+function searchProducts() {
+
+  const searchTerm = document.getElementById("productSearch").value.toLowerCase();
+
+
+  const products = document.querySelectorAll(".product");
+
+  products.forEach(product => {
+    const productName = product.querySelector(".name").textContent.toLowerCase();
+
+    if (productName.includes(searchTerm)) {
+      product.style.display = ""; 
+    } else {
+      product.style.display = "none"; 
+    }
+  });
+}

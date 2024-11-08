@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="search-bar">
+      <input
+        type="text"
+        id="productSearch"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+      />
+    </div>
+    <div class="product">
+      <img src="./components/assets/chicken.jpg" alt="" />
+      <div class="product-detail">
+        <strong class="name">Chicken</strong>
+        <div class="value"><span class="sale-off">99K</span> 79K</div>
+        <div class="add">Thêm ngay</div>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="./components/assets/mitq.jpg" alt="" />
+      <div class="product-detail">
+        <strong class="name">Noodles</strong>
+        <div class="value">68K</div>
+        <div class="add">Thêm ngay</div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="./components/assets/muc.jpg" alt="" />
+      <div class="product-detail">
+        <strong class="name">Squid</strong>
+        <div class="value"><span class="sale-off">157K</span> 123K</div>
+        <div class="add">Thêm ngay</div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="./components/assets/banhmi.jpg" alt="Hamburger" />
+      <div class="product-detail">
+        <strong class="name">Bread</strong>
+        <div class="value"><span class="sale-off">60K</span> 49K</div>
+        <div class="add">Thêm ngay</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function searchProducts() {
+      // Get the search term from the input field
+      const searchTerm = document
+        .getElementById("productSearch")
+        .value.toLowerCase();
+
+      // Select all product elements
+      const products = document.querySelectorAll(".product");
+
+      // Loop through each product and toggle visibility based on match
+      products.forEach((product) => {
+        // Get the product name and convert it to lowercase for case-insensitive matching
+        const productName = product
+          .querySelector(".name")
+          .textContent.toLowerCase();
+
+        // Check if the product name includes the search term
+        if (productName.includes(searchTerm)) {
+          product.style.display = ""; // Show product
+        } else {
+          product.style.display = "none"; // Hide product
+        }
+      });
+    }
+  </script>
+</html>
